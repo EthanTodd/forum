@@ -1,0 +1,57 @@
+<html>
+<head>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+	<link rel="stylesheet" href="./styles/show.css">
+	<title>index</title>
+</head>
+<body>
+	<div class="pure-g">
+		<header class="pure-u-1">
+			<h1>hi you are now viewing a selected thread</h1><br>
+
+			<% id.forEach(function(e){ %>
+			<form method="GET" action="/forums/<%= e.id %>/threads">
+				<input type="submit" value="back to threads page">
+			</form>
+			<% }); %>
+		</header>
+
+		<% stuff.forEach(function(e){ %>
+		<div class="pure-u-1-5">
+			<h3>logo</h3>
+		</div>
+		<div class="pure-u-3-5">
+			<h3> <%= e.title %> </h3>
+		</div>
+		<div class="pure-u-1-5">
+			<h3> votes: <%= e.votes %> </h3>
+	<!-- 		<form method="GET" action="/forums/<%=e.interests_id%>/threads/<%=e.id%>/edit">
+				<input type="submit" value="reply to this thread">
+			</form> -->
+		</div>
+		<div class="pure-u-1">
+			<form method="POST" action="/forums/<%=e.interests_id%>/threads/<%=e.id%>">
+				<input type="hidden" name="currentVotes" value="<%= e.votes %>">
+				<input type="text" name="reply" size="75" placeholder="type reply here"><br>
+				<input type="radio" name="vote" value="1">click here to vote for this thread<br>
+				<input type="submit" value="submit reply">
+			</form>
+
+		</div>
+		<% }); %>
+
+		<% replies.forEach(function(e){ %>
+			<div class="pure-u-1">
+				<div class="reply-content">
+					<p> <%= e.content %> </p>
+				</div>
+			</div>
+		<% }); %>
+
+
+	</div>
+
+
+</body>
+</html>
