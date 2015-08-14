@@ -182,16 +182,16 @@ app.get("/forums/:forums_id/threads/:threads_id", function(req, res){
 					console.log(err);
 				}else{
 					console.log("spitting out all replies for selected thread");
-					console.log(rows);
+					console.log(rows.content);
 					myReplies.push(rows)
 				}
 			});
 		}
-	var myReplies = [];
 	// console.log(myReplies);
 	var myObject = [
 		{id: forumId}
 		];
+	var myReplies = [];
   	var template = fs.readFileSync("./views/show.html", "utf8");
   	var rendered = ejs.render(template, {stuff: row, id: myObject, replies: myReplies})
   	res.send(rendered);

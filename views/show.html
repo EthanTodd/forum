@@ -26,9 +26,6 @@
 		</div>
 		<div class="pure-u-1-5">
 			<h3> votes: <%= e.votes %> </h3>
-	<!-- 		<form method="GET" action="/forums/<%=e.interests_id%>/threads/<%=e.id%>/edit">
-				<input type="submit" value="reply to this thread">
-			</form> -->
 		</div>
 		<div class="pure-u-1">
 			<form method="POST" action="/forums/<%=e.interests_id%>/threads/<%=e.id%>">
@@ -41,13 +38,13 @@
 		</div>
 		<% }); %>
 
-		<% replies.forEach(function(e){ %>
-			<div class="pure-u-1">
-				<div class="reply-content">
-					<p> <%= e.content %> </p>
+			<% replies.forEach(function(e){ %>
+		<div class="reply-content">
+				<div class="pure-u-1">
+						<p> <%= e.content %> </p>
 				</div>
-			</div>
-		<% }); %>
+		</div>
+			<% }); %>
 
 
 	</div>

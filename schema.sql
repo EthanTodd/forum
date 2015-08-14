@@ -12,7 +12,7 @@ CREATE TABLE interests (
 
 CREATE TABLE threads (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	datetime datetime NOT NULL DEFAULT NOW(),
+	datestamp datetime NOT NULL DEFAULT NOW(),
 	title TEXT,
 	votes INTEGER,
 	user_id INTEGER
@@ -21,7 +21,7 @@ CREATE TABLE threads (
 
 CREATE TABLE replies (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	datetime datetime NOT NULL DEFAULT NOW(),
+	datestamp datetime NOT NULL DEFAULT NOW(),
 	content TEXT,
 	threads_id INTEGER,
 	user_id INTEGER
@@ -29,7 +29,7 @@ CREATE TABLE replies (
 
 CREATE TABLE users (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	datetime datetime NOT NULL DEFAULT NOW(),
+	datestamp datetime NOT NULL DEFAULT NOW(),
 	name TEXT,
 	password TEXT,
 	photo TEXT
