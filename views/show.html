@@ -1,5 +1,6 @@
 <html>
 <head>
+	<link href='http://fonts.googleapis.com/css?family=Italiana' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
 	<link rel="stylesheet" href="/index.css">
@@ -51,64 +52,53 @@
 		<!-- page content -->
 		<div class="content shadow pure-u-1-1">
 			<div class="pure-g">
-			<% stuff.forEach(function(e){ %>
-			<div class="content-threads pure u-1">
-				<div class="pure-g">
-					<div class="pure-u-1-8">		
-					</div>
-					<div class="logo shadow pure-u-1-8">
-					</div>
-				<div class="title pure-u-1-2">
-					<h3> <%= e.title %> </h3>
-					<p><%= e.votes %> votes</p>
-				</div>
-				<div class="pure-u-1-4">
-				</div>
+				<div class="content-threads pure u-1">
+					<div class="pure-g">
+					<% stuff.forEach(function(e){ %>
+						<div class="pure-u-1-8">		
+						</div>
+						<div class="logo shadow pure-u-1-8">
+						</div>
+						<div class="title pure-u-1-2">
+							<h3> <%= e.title %> </h3>
+							<p><%= e.votes %> votes</p>
+						</div>
+						<div class="pure-u-1-4">
+						</div>
 
-				<div class="comment-box pure-u-1">
-					<form method="POST" action="/forums/<%=e.interests_id%>/threads/<%=e.id%>/replies">
-						<input type="hidden" name="currentVotes" value="<%= e.votes %>">
-						<input class="reply" rows="5" type="text" name="reply" size="75" placeholder="comment here"><br><br>
-						<input type="radio" name="vote" value="1"> click here to vote for this thread<br><br>
-						<button class="pure-button">submit reply</button>
-					</form>
+						<div class="comment-box pure-u-1">
+							<form method="POST" action="/forums/<%=e.interests_id%>/threads/<%=e.id%>/replies">
+								<input type="hidden" name="currentVotes" value="<%= e.votes %>">
+								<input class="reply" type="text" name="username" size="30" placeholder="user name"><br><br>
+								<input class="reply" type="text" name="reply" size="75" placeholder="add a new comment"><br><br>
+								<input type="radio" name="vote" value="1"> click here to vote for this thread<br><br>
+								<button class="pure-button">submit reply</button>
+							</form>
+						</div>
+					<% }); %>
 
-				</div>
-				</div>
-			</div>
-			<% }); %>
-			</div>
-			<h1> THE REPLIES SHOULD BE HERE </h1>
-			<% console.log(replies[0]) %>
-			<% replies.forEach(function(e){ %>
-			<div class="reply-content">
-					<div class="pure-u-1">
-							<p> <%= e.content %> </p>
+						<div class="pure-u-1">
+							<h2> comments: </h2>
+						</div>
+						
+						<% replies.forEach(function(e){ %>
+							<div class="reply-content pure-u-1">
+								<p> <%=e.username %> commented: "<%= e.content %>" <%= e.timestamp %></p>
+							</div>
+						<% }); %>
 					</div>
-					<div id="mapholder pure-u-1">
-					</div>
+				</div>
 			</div>
-			<% }); %>
 		</div>
 		
 		<!-- footer -->
 		<footer class="footer pure-u-1-1">
 			<div class="pure-g">
 				<div class="pure-u-1">
-					<p>&copy; 2015 by ethan</p>
+					<p>&copy; </p>
 				</div>
 				<div class="social-media pure-u-1">
-					<ul class="social-icons">
-						<li>
-							<i class="fa fa-3x fa-facebook-square"></i>
-						</li>
-						<li>
-							<i class="fa fa-twitter fa-3x"></i>
-						</li>
-						<li>
-							<i class="fa fa-instagram fa-3x"></i>
-						</li>
-					</ul>
+
 				</div>
 			</div>
 		</footer>

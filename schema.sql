@@ -21,7 +21,8 @@ CREATE TABLE replies (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	content TEXT,
 	threads_id INTEGER,
-	user_id INTEGER
+	username TEXT,
+	timestamp datetime default current_timestamp
 );
 
 CREATE TABLE users (

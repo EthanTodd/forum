@@ -130,8 +130,8 @@ app.post("/forums/:forum_id/threads/:threads_id/replies", function(req, res){
 				}
 		});
 	}
-	db.run("INSERT INTO replies (content, threads_id) VALUES (?,?)",
-		req.body.reply, req.params.threads_id,
+	db.run("INSERT INTO replies (content, threads_id, username) VALUES (?,?,?)",
+		req.body.reply, req.params.threads_id, req.body.username,
 		function(err){
 			if(err){
 				console.log(err);
