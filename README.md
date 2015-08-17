@@ -19,4 +19,6 @@ This code was written in javascript and rendered with html and css. The data is 
 
 ##Future Updates##
 
-For future updates I would like to add in geolocation, a user login, and fine tune the design. There are empty green boxes on the page where the logo for 'Wee Living' will go once it is designed.
+For future updates I would like to add in geolocation, a user login, and fine tune the design. There are empty green boxes on the page where the logo for 'Wee Living' will go once it is designed. I would also like the photos on the main index page to have click listeners on them instead of submit buttons.
+
+Thank you, and enjoy the forum!
