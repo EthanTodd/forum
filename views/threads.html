@@ -13,16 +13,16 @@
 		<!-- header -->
 		<header class="header pure-u-1">
 			<div class="pure-g">
-				<div class="logo pure-u-1-5">
-					<h1>logo here</h1>
+				<div class=" shadow index-logo pure-u-1-8">
+					<h1></h1>
 				</div>
-				<div class="pure-u-1-2">
-					<div class="header">
+				<div class="pure-u-3-4">
+					<div class="header-text">
 						<h1>wee living</h1>
 						<p>life hacks for small spaces</p>
 					</div>
 				</div>
-				<div class="pure-u-1-5">
+				<div class="pure-u-1-8">
 					<h1></h1>
 				</div>
 			</div>
@@ -32,40 +32,41 @@
 		<nav class="nav pure-u-1">
 			<div class="pure-g">
 				<div class="pure-u-1-2">
-					<h2>navigation here</h2>
-					<% id.forEach(function(e){ %>
-						<form method="GET" action="/forums/<%= e.id %>/threads/new">
-							<input type="submit" value="add new thread">
-						</form>
-					<% }); %>
-				</div>
-				<div class="pure-u-1-2">
-					<h2>navigation here</h2>
+					<h2></h2>
 					<form method="GET" action="/forums">
-						<input type="submit" value="back to interests page">
+						<button class="pure-button">homepage</button>
 					</form>
+				</div>
+				<% id.forEach(function(e){ %>
+				<div class="pure-u-1-2">
+					<h2></h2>
+						<form method="GET" action="/forums/<%= e.id %>/threads/new">
+							<button class="pure-button">add new thread</button>
+						</form>
+				<% }); %>
 				</div>
 			</div>
 		</nav>
 
 		<!-- page content -->
-		<div class="content pure-u-1-1">
+		<div class="content shadow pure-u-1-1">
 			<div class="pure-g">
 			<% stuff.forEach(function(e){ %>
 				<div class="content-threads pure-u-1">
 					<div class="pure-g">
-					<div class="logo pure-u-1-5">
-						<h3>logo</h3>
-					</div>
-					<div class="pure-u-3-5">
-						<h3> <%= e.title %> </h3>
-					</div>
-					<div class="votes pure-u-1-5">
-						<h3> votes: <%= e.votes %> </h3>
-						<form method="GET" action="/forums/<%=e.interests_id%>/threads/<%=e.id%>">
-							<input type="submit" value="view this thread">
-						</form>
-					</div>
+						<div class="pure-u-1-8">		
+						</div>
+						<div class="logo shadow pure-u-1-8">
+						</div>
+						<div class="title pure-u-1-2">
+							<h3> <%= e.title %> </h3>
+							<p> <%= e.votes %> votes</p>
+							<form method="GET" action="/forums/<%=e.interests_id%>/threads/<%=e.id%>">
+								<button class="pure-button">comment</button>
+							</form>
+						</div>
+						<div class="pure-u-1-4">
+						</div>
 					</div>
 				</div>
 				

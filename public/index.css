@@ -8,38 +8,116 @@ body {
 	text-align: center;
 }
 
+.content {
+
+}
+
+.shadow {
+	-webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.66);
+	-moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.66);
+	box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.66);
+}
+
+.header {
+	height: 150px;
+	margin-top: 3%;
+}
+
+.header-text {
+/*	border: solid 1px black;
+	box-sizing: border-box;*/
+}
+
 .index-logo {
 	background-color: #33FF99;
+	height: 150px;
+	width: 150px;
+/*	border: solid 1px white;
+	box-sizing: border-box;*/
+}
+
+.outer-photo {
+	/*margin: 0;*/
+	padding: 0;
+/*	border: solid 1px black;
+	box-sizing: border-box;*/
 }
 
 .photo {
-	height: 150px;
+	position: relative;
+	margin: 10;
+	height: 250px;
+	max-width: 100%;
+	border: solid 1px white;
+	box-sizing: border-box;
 }
 
-.photo:hover:after {
-	background-color: white;
-	opacity: 0.5;
+.photo:hover {
+	background-color: blue;
+	opacity: 0.9;
 	/*content: "my text here";*/
 }
 
 .content-threads {
-	border-top: solid 1px black;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }
 
 .logo {
+	margin: 5 0;
 	background-color: #33FF99;
-	border-left: solid 1px black;
-	border-right: solid 1px black;
-	box-sizing: border-box;
+	height: 100px;
+	width: 100px;
 }
 
-.votes {
-	background-color: #33CCCC;
-	border-left: solid 1px black;
-	border-right: solid 1px black;
-	box-sizing: border-box;
+.title {
+	margin-left: 20;
+}
+
+.comment-box {
+	margin-top: 20;
+}
+
+.shading {
+	color: rgba(255,255,255,1);
+	background-color: black;
+	background: -webkit-linear-gradient(bottom,rgba(0,0,0,1), rgba(0,0,0,.4));
+	background: -moz-linear-gradient(bottom,rgba(0,0,0,1), rgba(0,0,0,.4));
+
+}
+
+.thread-title {
+/*	display: inline-block;*/
+	position: absolute;
+	bottom: 0;
+	float: left;
+	margin-left: 15px;
+/*	bottom: 0;
+	display: table-cell;
+	vertical-align: bottom;
+
+*/}
+
+h3 {
+}
+
+.thread-text {
+/*	display: table-cell;
+	vertical-align: bottom;*/
+}
+
+.thread-button {
+/*	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	float: right;*/
+}
+
+.thread-submit {
+	float: right;
+	margin-right: 15px;
+/*	position: absolute;
+	bottom: 0;*/
 }
 
 .grayscale1 {
@@ -48,7 +126,7 @@ body {
 }
 
 .grayscale2 {
-	background: url('http://cds.a9t2h4q7.hwcdn.net/main/store/20090519001/items/media/Hardware/Whalenstoragelogo/ProductLarge/Closet_Organizer-Lifestyle-White.jpg');
+	background-image: url('http://cds.a9t2h4q7.hwcdn.net/main/store/20090519001/items/media/Hardware/Whalenstoragelogo/ProductLarge/Closet_Organizer-Lifestyle-White.jpg');
 }
 
 .grayscale3 {
@@ -61,65 +139,30 @@ body {
 
 .grayscale5 {
 	background: url('https://camdenblogs.files.wordpress.com/2015/08/small-space.jpg');
-	 -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -webkit-filter: grayscale(100%);
-	 filter: gray;
-	 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 }
 
 .grayscale6 {
 	background: url('http://www.remodelista.com/files/fields/700_pileas-by-mieke-verbijlen.png');
-	 -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -webkit-filter: grayscale(100%);
-	 filter: gray;
-	 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 }
 
 .grayscale7 {
 	background: url('http://anabelscleaning.com/wp-content/uploads/2014/12/Tips-for-Cleaning-Green.jpg');
-	 -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -webkit-filter: grayscale(100%);
-	 filter: gray;
-	 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 }
 
 .grayscale8 {
 	background: url('http://www.mathworks.com/matlabcentral/answers/uploaded_files/4964/refrigerator.jpg');
-	 -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -webkit-filter: grayscale(100%);
-	 filter: gray;
-	 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 }
 
 .grayscale9 {
 	background: url('https://s-media-cache-ak0.pinimg.com/736x/20/4d/79/204d79cfc803b4ade7f1a26e5c0ef353.jpg');
-	 -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -webkit-filter: grayscale(100%);
-	 filter: gray;
-	 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 }
 
 .grayscale10 {
 	background: url('http://i.telegraph.co.uk/multimedia/archive/02475/Couple_bored_2475394b.jpg');
-	 -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -webkit-filter: grayscale(100%);
-	 filter: gray;
-	 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 }
 
 .grayscale11 {
 	background: url('https://www.pets4you.com/images/breeds/french-bulldog_1.jpg');
-	 -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-	 -webkit-filter: grayscale(100%);
-	 filter: gray;
-	 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 }
 
 

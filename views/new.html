@@ -13,17 +13,17 @@
 		<!-- header -->
 		<header class="header pure-u-1">
 			<div class="pure-g">
-				<div class="logo pure-u-1-5">
-					<h1>logo here</h1>
+				<div class=" shadow index-logo pure-u-1-8">
+					<h1></h1>
 				</div>
-				<div class="pure-u-1-2">
-					<div class="header">
+				<div class="pure-u-3-4">
+					<div class="header-text">
 						<h1>wee living</h1>
-						<p>living lean for the urban warrior</p>
+						<p>what do you need help with?</p>
 					</div>
 				</div>
-				<div class="pure-u-1-5">
-					<h1>stuff</h1>
+				<div class="pure-u-1-8">
+					<h1></h1>
 				</div>
 			</div>
 		</header>
@@ -32,27 +32,38 @@
 		<nav class="nav pure-u-1">
 			<div class="pure-g">
 				<div class="pure-u-1-2">
-					<h2>navigation here</h2>
-					<% id.forEach(function(e){ %>
-						<form method="GET" action="/forums/<%= e.id %>/threads">
-							<input type="submit" value="back to threads page">
-						</form>
-					<% }); %>
+					<h2></h2>
+					<form method="GET" action="/forums">
+						<button class="pure-button">homepage</button>
+					</form>
 				</div>
 				<div class="pure-u-1-2">
-					<h2>navigation here</h2>
+					<h2></h2>
+					<% id.forEach(function(e){ %>
+						<form method="GET" action="/forums/<%= e.id %>/threads">
+							<button class="pure-button">threads page</button>
+						</form>
+					<% }); %>
 				</div>
 			</div>
 		</nav>
 
 		<!-- page content -->
-		<div class="content pure-u-1-1">
+		<div class="content shadow pure-u-1-1">
 			<div class="pure-g">
 			<% id.forEach(function(e){ %>
-				<form method="POST" action="/forums/<%= e.id %>/threads">
-					<input type="text" name="newThread" placeholder="threat title"><br>
-					<input type="submit" value="submit new thread">
+				<div class="pure-u-1-8">		
+				</div>
+				<div class="logo shadow pure-u-1-8">
+				</div>
+				<div class="title pure-u-1-2">
+				<form method="POST" action="/forums/<%= e.id %>/threads"><br>
+					<input type="text" name="newThread" placeholder="thread title" size="35"><br><br>
+					<button class="pure-button">submit new thread</button>
 				</form>
+				<div class"pure-u-1-4">
+				</div>
+				</div>
 			<% }); %>
 			</div>
 		</div>
